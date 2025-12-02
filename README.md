@@ -1,0 +1,1 @@
+- Reglas de firewall en caso de requerir: New-NetFirewallRule -DisplayName "MS - CHAT SERVER" -Direction Inbound -LocalPort 8085 -Protocol TCP -Action Allow 
