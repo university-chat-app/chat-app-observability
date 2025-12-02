@@ -64,7 +64,7 @@
       "targets": [
         {
           "datasource": "Prometheus",
-          "expr": "count(up{application=\"chat-servers\"} == 1)",
+          "expr": "sum(up{application=~\"$server\"})",
           "refId": "A"
         }
       ],
@@ -220,7 +220,7 @@
       "targets": [
         {
           "datasource": "Prometheus",
-          "expr": "process_uptime_seconds{application=~\"$server\"} * 1000",
+          "expr": "process_uptime_seconds{application=~\"$server\"}",
           "refId": "A"
         }
       ],
